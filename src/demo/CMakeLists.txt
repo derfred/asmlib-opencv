@@ -2,7 +2,7 @@ PROJECT( asmlib-opencv-demo )
 FIND_PACKAGE( OpenCV REQUIRED )
 SET(TEST_SRC main.cpp XGetopt.cpp)
 
-INCLUDE_DIRECTORIES( ../lib/ )
+INCLUDE_DIRECTORIES( ../lib/ ${OpenCV_INCLUDE_DIRS} )
 
 ADD_EXECUTABLE( demo ${TEST_SRC})
 TARGET_LINK_LIBRARIES( demo asm ${OpenCV_LIBS})

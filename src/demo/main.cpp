@@ -9,7 +9,8 @@
 
 #include <cstdio>
 #include <string>
-#include "highgui.h"
+#include "opencv2/highgui.hpp"
+#include "opencv2/objdetect.hpp"
 using std::string;
 using cv::imshow;
 using std::cerr;

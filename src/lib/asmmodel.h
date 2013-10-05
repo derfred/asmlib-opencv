@@ -1,7 +1,7 @@
 #ifndef ASMMODEL_H
 #define ASMMODEL_H
 #include "shapemodel.h"
-#include "cv.h"
+#include "opencv2/imgproc.hpp"
 
 /*! \mainpage asmlib-opencv Documentation
  *
@@ -54,7 +54,10 @@ class ASMFitResult : public FitResult {
 private:
     ASMModel *asmModel;
 public:
+    ASMFitResult() : asmModel(NULL) {}
     ASMFitResult(ASMModel *model): asmModel(model) {}
+
+    void setModel(ASMModel *model) { asmModel = model; }
 
     //! Get the result in landmark point list form.
     void toPointList(vector< Point_<int> > &pV) const;
@@ -105,8 +108,8 @@ public:
         \return A vector of FitResult's.
     */
     vector< ASMFitResult > fitAll(
-        const Mat & img,
-        const vector< cv::Rect > & detectedObjs,
+        const cv::Mat & img,
+        const std::vector< cv::Rect > & detectedObjs,
         int verbose=0);
 
     //! Do ASM fitting on an image patch, return the fitted vector
@@ -116,7 +119,7 @@ public:
         \param verbose Verbosity level.
         \return Result of ASM fitting.
     */
-    ASMFitResult fit(const Mat & img, int verbose=0);
+    ASMFitResult fit(const cv::Mat & img, int verbose=0);
 
     //! Build the model
     void buildModel(const string& shapeDefFile, const string& ptsListFile);

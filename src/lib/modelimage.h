@@ -2,8 +2,8 @@
 #define MODELIMAGE_H
 #include <string>
 #include <vector>
-#include "cv.h"
-#include "highgui.h"
+#include "opencv/cv.h"
+#include "opencv/highgui.h"
 #include "shapevec.h"
 #include "shapeinfo.h"
 using std::string;

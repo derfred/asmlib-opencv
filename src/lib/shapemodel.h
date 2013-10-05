@@ -2,7 +2,7 @@
 #define SHAPEMODEL_H
 
 #include "modelimage.h"
-#include "cv.h"
+#include "opencv/cv.h"
 #include "modelfile.h"
 #include <vector>
 using std::vector;

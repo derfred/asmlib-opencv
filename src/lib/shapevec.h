@@ -3,8 +3,8 @@
 
 #include "similaritytrans.h"
 
-#include "cv.h"
-#include "highgui.h"
+#include "opencv2/core.hpp"
+#include "opencv2/highgui.hpp"
 #include <vector>
 using std::vector;
 using cv::Point_;

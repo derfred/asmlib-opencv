@@ -131,6 +131,7 @@ void ASMModel::findParamForShapeBTSM(const ShapeVec &Y, const ShapeVec &Y_old,
 void ASMModel::findParamForShape(const ShapeVec &Y, ASMFitResult & fitResult){
     ShapeVec x, y;
 
+    fitResult.setModel(this);
     // Step 1: Init to zeros
     fitResult.params = Mat_<double>::zeros(nShapeParams, 1);
     SimilarityTrans &st = fitResult.transformation;
