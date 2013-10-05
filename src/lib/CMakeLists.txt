@@ -24,7 +24,7 @@ set(asmlib_cv2_generated_hdrs
     "${CMAKE_CURRENT_BINARY_DIR}/ASMLib_generated_const_reg.h")
 
 add_custom_command(
-   OUTPUT ${stat_model_cv2_generated_hdrs}
+   OUTPUT ${asmlib_cv2_generated_hdrs}
    COMMAND ${PYTHON_EXECUTABLE} "${OpenCV_CONFIG_PATH}/gen2.py" ASMLib ${CMAKE_CURRENT_BINARY_DIR} ${asmlib_opencv_hdrs}
    DEPENDS ${asmlib_opencv_hdrs})
 
