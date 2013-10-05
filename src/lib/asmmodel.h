@@ -30,7 +30,7 @@
  */
 
 //! Namespace for all ASM related stuffs.
-namespace StatModel {
+namespace ASMLib {
 
 using cv::Point_;
 using cv::Mat_;
@@ -50,12 +50,12 @@ class ASMModel;
 /**
  * \ingroup API
  */
-class ASMFitResult : public FitResult {
+class CV_EXPORTS_W_SIMPLE ASMFitResult : public FitResult {
 private:
     ASMModel *asmModel;
 public:
-    ASMFitResult() : asmModel(NULL) {}
-    ASMFitResult(ASMModel *model): asmModel(model) {}
+    CV_WRAP ASMFitResult() : asmModel(NULL) {}
+    CV_WRAP ASMFitResult(ASMModel *model): asmModel(model) {}
 
     void setModel(ASMModel *model) { asmModel = model; }
 
@@ -67,7 +67,7 @@ public:
 /**
  * \ingroup API
  */
-class ASMModel : public ShapeModel
+class CV_EXPORTS_W ASMModel : public ShapeModel
 {
 private:
     //! Inverted Covariance matrix pyramids for each landmark point
@@ -91,10 +91,10 @@ private:
 
 public:
     //! Empty ASM model.
-    ASMModel():localFeatureRad(4), ns(6){}
+    CV_WRAP ASMModel():localFeatureRad(4), ns(6){}
 
     //! Initialize by a file.
-    ASMModel(const string& filename) { loadFromFile(filename); }
+    CV_WRAP ASMModel(const string& filename) { loadFromFile(filename); }
 
     //! Search for objects (e.g. faces) in image, and run ASM on each object.
     /*!
@@ -107,7 +107,7 @@ public:
         \param verbose Verbosity level.
         \return A vector of FitResult's.
     */
-    vector< ASMFitResult > fitAll(
+    CV_WRAP vector< ASMFitResult > fitAll(
         const cv::Mat & img,
         const std::vector< cv::Rect > & detectedObjs,
         int verbose=0);
@@ -119,19 +119,19 @@ public:
         \param verbose Verbosity level.
         \return Result of ASM fitting.
     */
-    ASMFitResult fit(const cv::Mat & img, int verbose=0);
+    CV_WRAP ASMFitResult fit(const cv::Mat & img, int verbose=0);
 
     //! Build the model
-    void buildModel(const string& shapeDefFile, const string& ptsListFile);
+    CV_WRAP void buildModel(const string& shapeDefFile, const string& ptsListFile);
 
     //! Save the model into a file
-    void saveToFile(const string& filename);
+    CV_WRAP void saveToFile(const string& filename);
 
     //! Load the model from a file
-    void loadFromFile(const string& filename);
+    CV_WRAP void loadFromFile(const string& filename);
 
     //! Show the result in the image
-    void showResult(Mat &img, const vector< ASMFitResult > &res);
+    CV_WRAP void showResult(Mat &img, const vector< ASMFitResult > &res);
 
     //! Find the best parameter and transformation for the given shape.
     /*!

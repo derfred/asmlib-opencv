@@ -1,7 +1,7 @@
 #include "asmmodel.h"
 #include <cstdio>
 
-namespace StatModel {
+namespace ASMLib {
 
 void ASMModel::buildModel(const string& shapeDefFile, const string& ptsListFile)
 {

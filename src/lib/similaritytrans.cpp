@@ -1,7 +1,7 @@
 #include "similaritytrans.h"
 #include "shapevec.h"
 
-namespace StatModel {
+namespace ASMLib {
 void SimilarityTrans::invTransform(const ShapeVec &src, ShapeVec &dst) const{
     int nP = src.nPoints();
     double x11, x12, x21, x22;

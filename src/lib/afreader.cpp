@@ -1,6 +1,6 @@
 #include "afreader.h"
 
-namespace StatModel {
+namespace ASMLib {
 //! Constructor. Opens the file.
 /**
 

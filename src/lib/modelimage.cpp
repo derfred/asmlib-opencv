@@ -2,7 +2,7 @@
 #include "afreader.h"
 using std::cerr;
 
-namespace StatModel {
+namespace ASMLib {
 
 ModelImage::ModelImage()
 {

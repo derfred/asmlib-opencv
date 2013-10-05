@@ -16,7 +16,7 @@
 
 #include "shapevec.h"
 
-namespace StatModel {
+namespace ASMLib {
 void ShapeVec::zeroGravity()
 {
     doTranslate(-getXMean(), -getYMean());

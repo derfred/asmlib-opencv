@@ -16,7 +16,7 @@
 
 #include "modelfile.h"
 
-namespace StatModel {
+namespace ASMLib {
 
 void ModelFile::writePCA(const PCA* p)
 {

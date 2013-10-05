@@ -28,7 +28,7 @@ using std::cout;
 using std::endl;
 using std::fstream;
 
-namespace StatModel {
+namespace ASMLib {
 // class ModelFile
 // {
 //     public:

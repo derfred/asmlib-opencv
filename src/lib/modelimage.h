@@ -14,7 +14,7 @@ using cv::Mat;
 using cv::imread;
 using cv::Size;
 
-namespace StatModel {
+namespace ASMLib {
 
 //! Image and image related operations.
 class ModelImage

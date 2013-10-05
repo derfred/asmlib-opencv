@@ -9,7 +9,7 @@ using cv::Mat;
 using cv::Point;
 using std::vector;
 
-namespace StatModel {
+namespace ASMLib {
 //! Defines how landmark points form a "shape".
 /*!
  * We typically connect landmark points into some contours to form a real shape.

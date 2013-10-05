@@ -8,10 +8,10 @@
 using std::vector;
 using cv::PCA;
 
-namespace StatModel {
+namespace ASMLib {
 
 //! Base class for ASM/AAM fitting result
-struct FitResult{
+struct CV_EXPORTS_W FitResult{
     //! Parameters for the model
     Mat_< double > params;
 
@@ -27,10 +27,10 @@ struct FitResult{
  * This class is responsible for building the statistical shape model and
  * provides some helper functions.
  */
-class ShapeModel
+class CV_EXPORTS_W ShapeModel
 {
 public:
-    ShapeModel();
+    CV_WRAP ShapeModel();
 
     //! Save the model into a file
     virtual void saveToFile(ModelFile &file);

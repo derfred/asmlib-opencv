@@ -5,7 +5,7 @@
 #include "opencv2/imgproc.hpp"
 using cv::Mat;
 
-namespace StatModel {
+namespace ASMLib {
 
 class ShapeVec;
 

@@ -3,7 +3,7 @@
 
 #include <cstdio>
 
-namespace StatModel {
+namespace ASMLib {
 //! File reader with support to omit # starting lines
 /**
 

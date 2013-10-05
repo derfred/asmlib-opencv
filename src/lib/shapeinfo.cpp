@@ -1,6 +1,6 @@
 #include "shapeinfo.h"
 
-namespace StatModel {
+namespace ASMLib {
 void ShapeInfo::writeToFile(ModelFile &f) const {
     f.writeInt(nContours);
     for (int i=0;i<nContours+1;i++)

@@ -3,7 +3,7 @@
 #include "asmmodel.h"
 #include "afreader.h"
 
-namespace StatModel {
+namespace ASMLib {
 
 ShapeModel::ShapeModel()
 {

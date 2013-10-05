@@ -16,7 +16,7 @@ using cv::imshow;
 using std::cerr;
 using std::endl;
 
-using namespace StatModel;
+using namespace ASMLib;
 
 //! Build an ASM model.
 void buildASMModel(ASMModel & asmModel,

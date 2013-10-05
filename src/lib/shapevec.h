@@ -14,7 +14,7 @@ using cv::imread;
 using cv::mean;
 typedef unsigned int uint;
 
-namespace StatModel {
+namespace ASMLib {
 
 //! Shape vector, presented as a 1-D OpenCV matrix.
 class ShapeVec : public Mat_< double > {
