@@ -65,3 +65,5 @@ set_target_properties(asmlib PROPERTIES
                       PREFIX ""
                       OUTPUT_NAME asmlib
                       SUFFIX ".so")
+
+install(FILES "${CMAKE_CURRENT_BINARY_DIR}/asmlib.so" DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/site-packages" COMPONENT main)
